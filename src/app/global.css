@@ -1,3 +1,26 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
+
+@theme {
+  --animate-marquee: marquee 40s ease-in-out infinite;
+  --animate-grid: grid 15s linear infinite;
+
+  @keyframes marquee {
+    from { 
+      transform: translateX(0) 
+    }
+    to { 
+      transform: translateX(calc(-100% - var(--gap)))
+    }
+  }
+
+  @keyframes grid {
+    0% { 
+      transform: translateY(-50%) 
+    }
+    100% { 
+      transform: translateY(0) 
+    }
+  }
+}

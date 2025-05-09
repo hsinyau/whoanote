@@ -1,0 +1,10 @@
+{
+  "title": "API Reference",
+  "description": "This is a description~",
+  "icon": "AppWindow",
+  "defaultOpen": true,
+  "root": true,
+  "pages": [
+    "index"
+  ]
+}
