@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
-import { HomeLayout } from 'fumadocs-ui/layouts/home';
-import { baseOptions } from '@/app/layout.config';
+import type { ReactNode } from 'react'
+import { baseOptions } from '@/app/layout.config'
+import { HomeLayout } from 'fumadocs-ui/layouts/home'
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -18,7 +18,8 @@ function Footer() {
         <div>
           <p className="mb-1 text-sm font-semibold">WhoaNote</p>
           <p className="text-xs">
-            Built with ❤️ by{' '}
+            Built with ❤️ by
+            {' '}
             <span
               className="font-medium"
             >
@@ -28,5 +29,5 @@ function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

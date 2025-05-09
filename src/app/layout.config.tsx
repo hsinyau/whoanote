@@ -1,5 +1,5 @@
-import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared';
-import { ComponentIcon, Layout, Pencil, Server } from 'lucide-react';
+import type { BaseLayoutProps, LinkItemType } from 'fumadocs-ui/layouts/shared'
+import { ComponentIcon, Layout, Pencil, Server } from 'lucide-react'
 
 export const linkItems: LinkItemType[] = [
   {
@@ -13,7 +13,7 @@ export const linkItems: LinkItemType[] = [
     ),
     external: true,
   },
-];
+]
 
 export const baseOptions: BaseLayoutProps = {
   nav: {
@@ -71,4 +71,4 @@ export const baseOptions: BaseLayoutProps = {
     },
     ...linkItems,
   ],
-};
+}

@@ -1,26 +1,26 @@
-import { type ReactNode, memo } from "react";
-import { cn } from "@/lib/cn";
+import type { ReactNode } from 'react'
+import { cn } from '@/lib/cn'
+import { memo } from 'react'
 
 interface BentoGridProps {
-  children: ReactNode;
-  className?: string;
+  children: ReactNode
+  className?: string
 }
 
 interface BentoCardProps {
-  name: string;
-  className: string;
-  background: ReactNode;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Icon: any;
-  description: string;
+  name: string
+  className: string
+  background: ReactNode
+  Icon: any
+  description: string
 }
 
 function BentoGrid({ children, className }: BentoGridProps) {
   return (
-    <div className={cn("grid w-full auto-rows-[22rem] grid-cols-3", className)}>
+    <div className={cn('grid w-full auto-rows-[22rem] grid-cols-3', className)}>
       {children}
     </div>
-  );
+  )
 }
 
 const BentoCard = memo(
@@ -28,9 +28,9 @@ const BentoCard = memo(
     return (
       <div
         className={cn(
-          "group relative col-span-3 flex flex-col justify-between overflow-hidden",
-          "bg-white",
-          "transform-gpu dark:bg-[#0E0C0B]",
+          'group relative col-span-3 flex flex-col justify-between overflow-hidden',
+          'bg-white',
+          'transform-gpu dark:bg-[#0E0C0B]',
           className,
         )}
         key={name}
@@ -44,9 +44,9 @@ const BentoCard = memo(
           <p className="text-fd-muted-foreground max-w-lg">{description}</p>
         </div>
       </div>
-    );
+    )
   },
-);
-BentoCard.displayName = "BentoCard";
+)
+BentoCard.displayName = 'BentoCard'
 
-export { BentoCard, BentoGrid };
+export { BentoCard, BentoGrid }

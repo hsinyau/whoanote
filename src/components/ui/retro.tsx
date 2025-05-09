@@ -1,12 +1,12 @@
-import { cn } from "@/lib/cn";
+import { cn } from '@/lib/cn'
 
 interface RetroProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  angle?: number;
-  cellSize?: number;
-  opacity?: number;
-  lightLineColor?: string;
-  darkLineColor?: string;
+  className?: string
+  angle?: number
+  cellSize?: number
+  opacity?: number
+  lightLineColor?: string
+  darkLineColor?: string
 }
 
 export function Retro({
@@ -14,22 +14,22 @@ export function Retro({
   angle = 65,
   cellSize = 60,
   opacity = 0.3,
-  lightLineColor = "gray",
-  darkLineColor = "gray",
+  lightLineColor = 'gray',
+  darkLineColor = 'gray',
   ...props
 }: RetroProps) {
   const gridStyles = {
-    "--grid-angle": `${angle}deg`,
-    "--cell-size": `${cellSize}px`,
-    "--opacity": opacity,
-    "--light-line": lightLineColor,
-    "--dark-line": darkLineColor,
-  } as React.CSSProperties;
+    '--grid-angle': `${angle}deg`,
+    '--cell-size': `${cellSize}px`,
+    '--opacity': opacity,
+    '--light-line': lightLineColor,
+    '--dark-line': darkLineColor,
+  } as React.CSSProperties
 
   return (
     <div
       className={cn(
-        "pointer-events-none absolute size-full overflow-hidden [perspective:150px]",
+        'pointer-events-none absolute size-full overflow-hidden [perspective:150px]',
         `opacity-[var(--opacity)]`,
         className,
       )}
@@ -42,5 +42,5 @@ export function Retro({
 
       <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent to-90% dark:from-black" />
     </div>
-  );
+  )
 }

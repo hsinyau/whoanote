@@ -1,4 +1,4 @@
-import { Grid } from "@/components/home/bento";
+import { Grid } from '@/components/home/bento'
 
 export default function HomePage() {
   return (
@@ -7,5 +7,5 @@ export default function HomePage() {
         <Grid />
       </div>
     </main>
-  );
+  )
 }

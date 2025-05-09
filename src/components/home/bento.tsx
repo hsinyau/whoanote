@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { BentoCard, BentoGrid } from "@/components/ui";
-import { features } from "@/components/home/cards";
+import { features } from '@/components/home/cards'
+import { BentoCard, BentoGrid } from '@/components/ui'
 
 export function Grid() {
   return (
@@ -10,5 +10,5 @@ export function Grid() {
         <BentoCard key={index} {...features} />
       ))}
     </BentoGrid>
-  );
+  )
 }
